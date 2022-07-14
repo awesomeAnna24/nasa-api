@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Serif+Display:wght@200;400&family=Raleway:wght@200;400&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+input {
+  margin-bottom: 20px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+}
+p {
+  text-align: justify;
+}
+.hidden {
+  display: none;
+}
