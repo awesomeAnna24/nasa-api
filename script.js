@@ -9,7 +9,8 @@ function getApod() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector('span').innerText = data.date;
+      document.querySelector('span').innerText =
+        document.querySelector('input.value');
       //create a conditional to accomodate video media
       if (data.media_type === 'video') {
         document.querySelector('iframe').classList.remove('hidden');
