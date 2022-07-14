@@ -9,17 +9,19 @@ function getApod() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector('span').innerText =
-        document.querySelector('input.value');
-      //create a conditional to accomodate video media
-      if (data.media_type === 'video') {
-        document.querySelector('iframe').classList.remove('hidden');
-        document.querySelector('iframe').src = data.url;
-      } else {
-        document.querySelector('img').classList.remove('hidden');
-        document.querySelector('img').src = data.hdurl;
-      }
-      document.querySelector('p').innerText = data.explanation;
+      if (date === data.date) {
+        document.querySelector('span').innerText =
+          document.querySelector('input').value;
+        //create a conditional to accomodate video media
+        if (data.media_type === 'video') {
+          document.querySelector('iframe').classList.remove('hidden');
+          document.querySelector('iframe').src = data.url;
+        } else {
+          document.querySelector('img').classList.remove('hidden');
+          document.querySelector('img').src = data.hdurl;
+        }
+        document.querySelector('p').innerText = data.explanation;
+      } else return;
     })
     .catch((err) => console.log(`Error ${err}`));
 }
